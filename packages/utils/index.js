@@ -135,7 +135,7 @@ const Utils = {
       }
       return (
         Utils.env.isIOS() &&
-        (deviceHeight === 2436 || deviceHeight === 2688 || deviceHeight === 1792 || deviceHeight === 1624)
+        ((deviceHeight === 2436 || deviceHeight === 2688 || deviceHeight === 1792 || deviceHeight === 1624) || weex.config.env.deviceModel.match(/(iPhone10,3|iPhone10,6|iPhone11|iPhone12|iPhone13)/))
       );
     },
     isAndroid () {
