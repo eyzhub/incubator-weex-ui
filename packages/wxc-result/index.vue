@@ -53,7 +53,6 @@ under the License.
     width: 750px;
     flex: 1;
     align-items: center;
-    background-color: #f2f3f4;
   }
 
   .result-image {
