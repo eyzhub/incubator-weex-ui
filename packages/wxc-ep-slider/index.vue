@@ -65,6 +65,10 @@ under the License.
         type: Number,
         default: 1
       },
+      transitionDuration: {
+        type: Number,
+        default: 300
+      },
       selectIndex: {
         type: Number,
         default: 0
@@ -252,7 +256,7 @@ under the License.
         let currentCardScale = 1;
         let rightCardScale = this.cardS.scale;
         let leftCardScale = this.cardS.scale;
-        const duration = (selectIndex === 0 && originIndex === this.cardLength - 1 && this.cardLength !== 2) ? 0.00001 : 300;
+        const duration = (selectIndex === 0 && originIndex === this.cardLength - 1 && this.cardLength !== 2) ? 0.00001 : this.transitionDuration;
         this.$emit('wxcEpSliderCurrentIndexSelected', { currentIndex: selectIndex });
         if (originIndex < selectIndex) {
           currentCardScale = this.cardS.scale;
